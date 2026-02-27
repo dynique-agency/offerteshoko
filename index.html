@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusief Voorstel | SHOKO x Dynique</title>
+    
+    <!-- Fonts: Playfair Display (Serif/Koppen) & Inter (Sans/Leesbaarheid) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS for rapid, robust mobile-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espresso: '#231611',
+                        espressoLight: '#322119',
+                        cream: '#FDFBF7',
+                        creamMuted: '#E8E4D9',
+                        gold: '#D4AF37',
+                        goldHover: '#B5952F',
+                        caramel: '#C68E17'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS voor Animaties & Glassmorphism -->
+    <style>
+        body {
+            background-color: #231611;
+            color: #FDFBF7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Subtiel patroon op de achtergrond voor extra diepte (noise) */
+        .bg-noise {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Premium Solid Cards ipv over-the-top Glassmorphism */
+        .glass-card {
+            background: #2A1B14;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .glass-card-highlight {
+            background: #322119;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Scroll Reveal Animaties */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* Custom Scrollbar voor premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #231611;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+
+        /* Strakke lijnen voor decoratie */
+        .gold-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, #D4AF37, transparent);
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="font-sans text-lg relative pb-24 md:pb-0">
+    <div class="bg-noise"></div>
+
+    <!-- Header / Nav -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-espresso/80 border-b border-white/5" id="navbar">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-serif text-xl tracking-wider font-medium">SHOKO <span class="text-gold italic text-sm font-light mx-2">x</span> Dynique</div>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+        <!-- 1. Hero Section -->
+        <section class="min-h-[90vh] flex flex-col justify-center items-center text-center px-6 pt-24 pb-12">
+            <div class="reveal">
+                <p class="text-gold font-medium tracking-widest uppercase text-sm mb-4">Exclusief Digitaal Voorstel</p>
+                <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight text-cream">
+                    Speciaal voor <br/> <span class="italic font-light text-gold">SHOKO</span>
+                </h1>
+                <p class="text-creamMuted text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                    Een op maat gemaakt groeiplan voor meer vaste gasten en een onweerstaanbare online uitstraling in Simpelveld en omstreken.
+                </p>
+            </div>
+        </section>
+
+        <!-- Decoratieve Lijn -->
+        <div class="gold-line reveal"></div>
+
+        <!-- 2. De Visie -->
+        <section id="visie" class="py-24 px-6">
+            <div class="max-w-3xl mx-auto text-center reveal">
+                <h2 class="font-serif text-3xl md:text-5xl mb-8 text-cream">Jullie vakmanschap,<br><span class="text-gold italic">digitaal vertaald.</span></h2>
+                <div class="glass-card rounded-2xl p-8 md:p-12 text-left md:text-center text-creamMuted leading-relaxed">
+                    <p class="mb-6">
+                        Bij SHOKO draait alles om smaak, sfeer en pure kwaliteit. Jullie lekkere eten en drankjes zijn een beleving op zich. Het is tijd dat jullie online uitstraling exact datzelfde, warme en verfijnde gevoel ademt.
+                    </p>
+                    <p>
+                        Geen standaard, onpersoonlijke website. Wij bouwen een digitaal verlengstuk van jullie zaak. Een plek die vertrouwen wekt, direct de juiste (en iets oudere) doelgroep aanspreekt door extreme leesbaarheid, en gasten overtuigt nog vóór ze de drempel in Simpelveld over stappen.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. De Website Pakketten -->
+        <section class="py-24 px-6 bg-espressoLight/30 relative">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="font-serif text-4xl md:text-5xl text-cream mb-4">De Digitale Fundering</h2>
+                    <p class="text-creamMuted text-lg">Kies de presentatie die het beste bij jullie ambities past.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                    
+                    <!-- Basis Pakket -->
+                    <div class="glass-card rounded-2xl p-8 reveal reveal-delay-1 flex flex-col h-full">
+                        <h3 class="font-serif text-2xl mb-2">Basis Website</h3>
+                        <p class="text-3xl font-light text-gold mb-6">€ 1.500,-</p>
+                        <p class="text-sm text-creamMuted mb-8 italic">Het perfecte, chique digitale visitekaartje (vergelijkbaar met auwtaelse.nl).</p>
+                        
+                        <ul class="space-y-4 mb-8 flex-grow text-creamMuted text-sm md:text-base">
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> 1-pagina website met alle essentiële info.</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Maatwerk, warm design.</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Professionele fotografie (basis).</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Wervende teksten verzorgd door Dynique.</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Basis SEO inrichting.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Plus Pakket (Aanbevolen) -->
+                    <div class="glass-card-highlight rounded-2xl p-8 reveal reveal-delay-2 relative transform md:-translate-y-4 flex flex-col h-full shadow-2xl z-10">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gold text-espresso text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full">
+                            Meest Gekozen & Aanbevolen
+                        </div>
+                        <h3 class="font-serif text-2xl mb-2 mt-2">Plus Website</h3>
+                        <p class="text-4xl font-light text-gold mb-6">€ 1.800,-</p>
+                        
+                        <div class="bg-espresso/50 border border-gold/20 rounded-xl p-4 mb-8">
+                            <p class="text-xs text-gold uppercase tracking-wider mb-2 font-semibold">Strategische Keuze voor SHOKO</p>
+                            <p class="text-sm text-creamMuted">
+                                Omdat jullie een iets oudere doelgroep bedienen, is <strong>rust en overzicht</strong> cruciaal. Waar een 1-pagina website veel 'scrollen' vereist, biedt deze Plus-optie een logische menustructuur verdeeld over 5 pagina's. Dit straalt meer klasse uit, leest prettiger en verhoogt het vertrouwen aanzienlijk.
+                            </p>
+                        </div>
+
+                        <ul class="space-y-4 mb-8 flex-grow text-creamMuted text-sm md:text-base">
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> <strong>Alles van Basis, plus:</strong></li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Verdeeld over 5 heldere, rustige pagina's.</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Uitgebreide fotografie, professioneel bewerkt.</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> SEO Plus (Beter vindbaar in regio Simpelveld).</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Geoptimaliseerd voor een oudere doelgroep (grotere leesletters, maximaal contrast).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Premium Pakket -->
+                    <div class="glass-card rounded-2xl p-8 reveal reveal-delay-3 flex flex-col h-full">
+                        <h3 class="font-serif text-2xl mb-2">Premium Website</h3>
+                        <p class="text-3xl font-light text-gold mb-6">€ 2.100,-</p>
+                        <p class="text-sm text-creamMuted mb-8 italic">De ultieme digitale beleving met video en slimme systemen.</p>
+                        
+                        <ul class="space-y-4 mb-8 flex-grow text-creamMuted text-sm md:text-base">
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> <strong>Alles van Plus, plus:</strong></li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Uitgebreide videografische shoot (sfeerbeelden).</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Premium SEO (Dominantie in Zuid-Limburg).</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Extra pagina's indien nodig.</li>
+                            <li class="flex items-start"><span class="text-gold mr-3">✦</span> Slimme e-mail & reserveringsformulieren.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Hosting & Onderhoud -->
+        <section class="py-24 px-6">
+            <div class="max-w-4xl mx-auto reveal">
+                <h2 class="font-serif text-3xl md:text-4xl text-center text-cream mb-12">Hosting & Zorgeloos Onderhoud</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glass-card rounded-2xl p-6 md:p-8 flex items-start">
+                        <div class="bg-espressoLight text-gold rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-6 border border-gold/20">A</div>
+                        <div>
+                            <h4 class="font-serif text-xl mb-1">De Basis</h4>
+                            <p class="text-gold font-medium mb-3">€ 20,- / maand</p>
+                            <p class="text-sm text-creamMuted leading-relaxed">
+                                Razendsnelle premium hosting, verplichte SSL beveiliging (groen slotje) en een gegarandeerde 99.9% uptime.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 md:p-8 flex items-start border-gold/40 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-gold text-espresso text-[10px] font-bold uppercase py-1 px-3 rounded-bl-lg">Ontzorgd</div>
+                        <div class="bg-gold text-espresso rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 mr-6">B</div>
+                        <div>
+                            <h4 class="font-serif text-xl mb-1">Volledig Ontzorgd</h4>
+                            <p class="text-gold font-medium mb-3">€ 35,- / maand</p>
+                            <p class="text-sm text-creamMuted leading-relaxed">
+                                Alles van optie A, <strong>plus:</strong> maandelijks kleine aanpassingen aan de site door mij uitgevoerd (bijv. menukaart wijzigen, openingstijden aanpassen). 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Decoratieve Lijn -->
+        <div class="gold-line reveal"></div>
+
+        <!-- 5. Social Media Management -->
+        <section class="py-24 px-6 bg-espressoLight/20">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/2 reveal">
+                        <h2 class="font-serif text-4xl md:text-5xl text-cream mb-6">Het "Volle Zaken" Pakket</h2>
+                        <h3 class="text-xl text-gold mb-6 font-light">Social Media Management</h3>
+                        <p class="text-creamMuted mb-6 leading-relaxed">
+                            Jullie focussen op de perfecte service en het lekkerste eten. Ik zorg dat jullie ook op social media goed voor de dag komen, met een speciale focus op het aantrekken van een jonger publiek.
+                        </p>
+                        <p class="text-creamMuted leading-relaxed">
+                            Met chique, 'Instagram-waardige' sfeerfotografie van de hoogste kwaliteit laten we de jongere generatie zien dat SHOKO de absolute place-to-be is om bijvoorbeeld in het weekend een heerlijke cocktail te komen drinken. We bouwen een loyale community die perfect aansluit bij jullie stijlvolle uitstraling.
+                        </p>
+                    </div>
+                    
+                    <div class="md:w-1/2 w-full reveal reveal-delay-2">
+                        <div class="glass-card-highlight rounded-2xl p-8">
+                            <div class="flex justify-between items-end mb-8 border-b border-gold/20 pb-6">
+                                <div>
+                                    <p class="text-sm text-gold uppercase tracking-wider mb-1">Investering</p>
+                                    <p class="text-4xl font-serif text-cream">€ 450,-</p>
+                                </div>
+                                <p class="text-creamMuted text-sm">per maand</p>
+                            </div>
+                            
+                            <ul class="space-y-4 text-creamMuted text-sm md:text-base">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-gold mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 3 High-end posts per week (Instagram & FB)</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-gold mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Actieve stories (sfeer van de dag)</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-gold mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Community Management (Reageren & interactie)</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-gold mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Maandelijkse professionele shoot op locatie</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Call to Action -->
+        <section id="contact" class="py-32 px-6 text-center">
+            <div class="max-w-2xl mx-auto reveal">
+                <h2 class="font-serif text-4xl md:text-6xl text-cream mb-6">Klaar voor de volgende stap?</h2>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts voor animaties -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer voor Scroll Animaties
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); // Animateert slechts 1 keer
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // Navbar achtergrond aanpassen bij scroll
+            window.addEventListener('scroll', () => {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-lg');
+                } else {
+                    navbar.classList.remove('shadow-lg');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
